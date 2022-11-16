@@ -182,8 +182,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.4)
   rubocop (~> 1.18.0)
-  rubocop-performance (~> 1.11.0)
-  rubocop-rails (~> 2.11.0)
+  rubocop-rails
   tzinfo-data
 
 RUBY VERSION
