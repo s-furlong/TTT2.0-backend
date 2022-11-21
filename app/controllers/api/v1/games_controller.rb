@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative "../../../../lib/ttt_logic.rb"
 
 module Api
   module V1
@@ -23,7 +24,10 @@ module Api
         # require 'pry'
         # binding.pry
         board = params["board"]
-        render :json => {:name => board}
+        game = Tic.new(board)
+
+        game_over = game.win?(board)
+        render :json => {:win => game_over, :token => "w", :draw => true, :winner => "X" }
       end
 
       # GET /games/1
