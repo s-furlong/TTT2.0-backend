@@ -6,6 +6,7 @@ module Api
       before_action :set_game, only: %i[show update destroy]
       
       def move
+        render :json => {:name => "any name"}
         #REQUEST:
         #board = arr ARRAY
         
