@@ -20,9 +20,7 @@ module Api
       
       # GET /games
       def index
-        @games = Game.all
-
-        render json: @games
+        render :json => {:name => "any name"}
       end
 
       # GET /games/1
