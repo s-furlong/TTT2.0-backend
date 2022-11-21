@@ -13,5 +13,9 @@ AllCops:
     - "config/environments/development.rb"
     - "config/environments/production.rb"
     - "spec/spec_helper.rb"
-    - "config/routes.rb"
 
+Style/Documentation:
+  Enabled: false
+
+Rails/Output:
+  Enabled: false
