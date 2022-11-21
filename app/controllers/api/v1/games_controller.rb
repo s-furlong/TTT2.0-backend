@@ -20,7 +20,10 @@ module Api
       
       # GET /games
       def index
-        render :json => {:name => "any name"}
+        # require 'pry'
+        # binding.pry
+        board = params["board"]
+        render :json => {:name => board}
       end
 
       # GET /games/1
