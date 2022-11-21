@@ -4,7 +4,19 @@ module Api
   module V1
     class GamesController < ApplicationController
       before_action :set_game, only: %i[show update destroy]
-
+      
+      def move
+        #REQUEST:
+        #board = arr ARRAY
+        
+        #RESPONSE:
+        #token = ttt_logic.which_won?(arr) STRING X or O
+        #win = ttt_logic.win?(arr) BOOLEAN
+        #draw = ttt_logic.draw?(arr) BOOLEAN
+        #winner = ttt_logic.winner(arr) X or O
+      end
+      
+      
       # GET /games
       def index
         @games = Game.all

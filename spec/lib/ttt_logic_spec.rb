@@ -161,13 +161,21 @@ describe 'Tic Class' do
     end
   end
 
-  context "win?" do
-    it "will return a true if the game results in a win" do
+  context 'win?' do
+    it 'will return a true if the game results in a win' do
       arr = %w[X O X X O X X O O]
       tic = Tic.new(arr)
 
       win = tic.win?(arr)
       expect(win).to eq(true)
-  end
+    end
+
+    it 'will return a false if the game results if has not been won' do
+      arr = %w[X O X X O X O X O]
+      tic = Tic.new(arr)
+
+      no_win = tic.win?(arr)
+      expect(no_win).to eq(false)
+    end
   end
 end
