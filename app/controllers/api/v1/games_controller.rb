@@ -16,7 +16,7 @@ module Api
         current_player = game.which_won(board)
         tie = game.draw?(board)
         winner = game.winner(board)
-
+        
         render :json => {:win => game_over, :token => current_player, :draw => tie, :winner => winner }
       end
     end
