@@ -44,7 +44,7 @@ RSpec.describe "/games", type: :request do
         expect(response).to have_http_status(:ok)
         expect(response.content_type).to match(a_string_including("application/json"))
         response_body = JSON.parse(response.body, symbolize_names: true)
-        expect(response_body).to eq({:win => false, :token => "w", :draw => true, :winner => "X" })
+        expect(response_body).to eq({:win => false, :token => "X", :draw => false, :winner => nil })
     end
   end
 
