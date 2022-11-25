@@ -6,7 +6,6 @@ module Api
     class GamesController < ApplicationController
       before_action :set_game, only: %i[show update destroy]
 
-      # GET /games
       def index
 
         board = params["board"]
