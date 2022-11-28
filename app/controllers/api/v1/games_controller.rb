@@ -4,8 +4,6 @@ require_relative "../../../../lib/ttt_logic.rb"
 module Api
   module V1
     class GamesController < ApplicationController
-      before_action :set_game, only: %i[show update destroy]
-
       def index
 
         board = params["board"]

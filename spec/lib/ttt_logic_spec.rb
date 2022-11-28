@@ -42,13 +42,13 @@ describe 'Tic Class' do
       expect(win).to eq([0, 1, 2])
     end
 
-    it 'will return false if there are no combinatiions' do
+    it 'will return false if there are no winning  combinatiions' do
       arr = %w[X O X X O X O X O]
       tic = Tic.new(arr)
 
-      draw = tic.won?(arr)
+      win = tic.won?(arr)
 
-      expect(draw).to eq(false)
+      expect(win).to eq(false)
     end
   end
 
@@ -66,9 +66,9 @@ describe 'Tic Class' do
       arr = ['X', 'O', 'X', 'X', ' ', 'X', ' ', 'X', 'O']
       tic = Tic.new(arr)
 
-      in_progress = tic.full?(arr)
+      full = tic.full?(arr)
 
-      expect(in_progress).to eq(false)
+      expect(full).to eq(false)
     end
   end
 
@@ -77,9 +77,9 @@ describe 'Tic Class' do
       arr = %w[X O X X O X X O O]
       tic = Tic.new(arr)
 
-      win = tic.draw?(arr)
+      draw = tic.draw?(arr)
 
-      expect(win).to eq(false)
+      expect(draw).to eq(false)
     end
 
     it 'will return true if the board has no winning combination' do
@@ -106,18 +106,18 @@ describe 'Tic Class' do
       arr = %w[X O X X O X O X O]
       tic = Tic.new(arr)
 
-      win = tic.over?(arr)
+      over = tic.over?(arr)
 
-      expect(win).to eq(true)
+      expect(over).to eq(true)
     end
 
     it 'will return false if the game is draw' do
       arr = ['X', 'O', ' ', 'X', 'O', 'X', 'O', 'X', 'O']
       tic = Tic.new(arr)
 
-      not_over = tic.over?(arr)
+      over = tic.over?(arr)
 
-      expect(not_over).to eq(false)
+      expect(over).to eq(false)
     end
   end
 
@@ -126,9 +126,9 @@ describe 'Tic Class' do
       arr = ['X', 'O', ' ', 'X', 'O', 'X', 'O', 'X', 'O']
       tic = Tic.new(arr)
 
-      no_winner = tic.winner(arr)
+      winner = tic.winner(arr)
 
-      expect(no_winner).to eq(nil)
+      expect(winner).to eq(nil)
     end
 
     it 'will return token of the winner' do
@@ -146,18 +146,18 @@ describe 'Tic Class' do
       arr = %w[X O X X O X O X O]
       tic = Tic.new(arr)
 
-      no_winner = tic.check_and_ending(arr)
+      winner = tic.check_and_ending(arr)
 
-      expect(no_winner).to eq(nil)
+      expect(winner).to eq(nil)
     end
 
     it 'will return nil if there is a winner' do
       arr = %w[X O X X O X O X O]
       tic = Tic.new(arr)
 
-      no_winner = tic.check_and_ending(arr)
+      winner = tic.check_and_ending(arr)
 
-      expect(no_winner).to eq(nil)
+      expect(winner).to eq(nil)
     end
   end
 
@@ -174,8 +174,8 @@ describe 'Tic Class' do
       arr = %w[X O X X O X O X O]
       tic = Tic.new(arr)
 
-      no_win = tic.win?(arr)
-      expect(no_win).to eq(false)
+      win = tic.win?(arr)
+      expect(win).to eq(false)
     end
   end
 end
